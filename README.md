@@ -1,6 +1,6 @@
 # Fresh, like home!
 
-Access files from home.
+Access home's files.
 
 ### Usage
 
