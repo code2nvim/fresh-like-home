@@ -1,5 +1,6 @@
 import { PageProps } from "$fresh/server.ts";
-import { ThemeButton, ThemeLayout } from "../islands/theme.tsx";
+import { Header } from "../components/Header.tsx";
+import { ThemeLayout } from "../islands/theme.tsx";
 
 export default function Layout({ Component }: PageProps) {
   return (
@@ -9,9 +10,7 @@ export default function Layout({ Component }: PageProps) {
         "bg-white text-black dark:bg-black dark:text-white",
       ].join(" ")}
     >
-      <header>
-        <ThemeButton />
-      </header>
+      <Header />
       <Component />
       <footer>footer</footer>
     </ThemeLayout>
