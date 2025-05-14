@@ -5,7 +5,7 @@ export default function Home() {
     <main
       class={[
         "grow flex flex-col justify-center",
-        "bg-slate-200 dark:bg-slate-600",
+        "bg-slate-200 dark:bg-slate-800",
       ].join(" ")}
     >
       <Button type="button">button</Button>
