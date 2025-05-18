@@ -4,7 +4,7 @@ export function Header() {
   return (
     <header class="grid grid-cols-2 px-2 py-1">
       <div>
-        <button type="button">HomeButon</button>
+        <a href="/">Home</a>
       </div>
       <div class="flex justify-end">
         <ThemeButton />
