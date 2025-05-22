@@ -7,7 +7,7 @@ export default function Layout({ Component }: PageProps) {
     <ThemeLayout
       class={[
         "flex min-h-screen flex-col",
-        "bg-white text-black dark:bg-black dark:text-white",
+        "bg-slate-200 text-black dark:bg-slate-800 dark:text-white",
       ].join(" ")}
     >
       <Header />
