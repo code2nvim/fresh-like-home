@@ -41,5 +41,9 @@ export function ThemeHome(props: JSX.HTMLAttributes<HTMLAnchorElement>) {
 }
 
 export function ThemeLayout(props: JSX.HTMLAttributes<HTMLDivElement>) {
-  return <div {...props} class={[theme, props.class].join(" ")} />;
+  return (
+    <>
+      {IS_BROWSER && <div {...props} class={[props.class, theme].join(" ")} />}
+    </>
+  );
 }
