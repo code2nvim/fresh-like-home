@@ -1,10 +1,10 @@
-import { ThemeButton } from "../islands/theme.tsx";
+import { ThemeButton, ThemeHome } from "../islands/theme.tsx";
 
 export function Header() {
   return (
-    <header class="grid grid-cols-2 px-2 py-1">
-      <div>
-        <a href="/">Home</a>
+    <header class="grid grid-cols-2 p-2">
+      <div className="flex">
+        <ThemeHome className="h-full aspect-square"/>
       </div>
       <div class="flex justify-end">
         <ThemeButton />
