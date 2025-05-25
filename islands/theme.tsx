@@ -48,7 +48,7 @@ export function ThemeLayout(props: JSX.HTMLAttributes<HTMLDivElement>) {
   );
 }
 
-export function ThemeLogo() {
+export function FreshLogo() {
   return (
     <img
       width="197"

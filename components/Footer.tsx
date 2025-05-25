@@ -1,10 +1,10 @@
-import { ThemeLogo } from "../islands/theme.tsx";
+import { FreshLogo } from "../islands/theme.tsx";
 
 export function Footer() {
   return (
-    <footer>
+    <footer class="flex justify-center">
       <a href="https://fresh.deno.dev">
-        <ThemeLogo />
+        <FreshLogo />
       </a>
     </footer>
   );
