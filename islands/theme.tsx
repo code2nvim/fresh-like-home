@@ -47,3 +47,16 @@ export function ThemeLayout(props: JSX.HTMLAttributes<HTMLDivElement>) {
     </>
   );
 }
+
+export function ThemeLogo() {
+  return (
+    <img
+      width="197"
+      height="37"
+      src={theme.value == "dark"
+        ? "https://fresh.deno.dev/fresh-badge-dark.svg"
+        : "https://fresh.deno.dev/fresh-badge.svg"}
+      alt="Made with Fresh"
+    />
+  );
+}
