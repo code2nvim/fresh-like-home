@@ -5,8 +5,8 @@ export function Anchor(props: JSX.HTMLAttributes<HTMLAnchorElement>) {
     <a
       {...props}
       class={[
-        "flex w-full justify-center rounded-xl border-2 p-8 text-xl shadow-lg",
-        "border-green-100 dark:border-green-900",
+        "flex w-full justify-center rounded-xl border p-8 text-xl shadow-lg",
+        "border-green-300 dark:border-green-700",
         props.class,
       ].join(" ")}
     />

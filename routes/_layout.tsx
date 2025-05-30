@@ -12,7 +12,9 @@ export default function Layout({ Component }: PageProps) {
       ].join(" ")}
     >
       <Header />
-      <Component />
+      <div class="grid grow">
+        <Component />
+      </div>
       <Footer />
     </ThemeLayout>
   );
