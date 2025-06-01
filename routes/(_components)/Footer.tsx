@@ -1,4 +1,4 @@
-import { FreshLogo } from "../islands/theme.tsx";
+import { FreshLogo } from "../../islands/theme.tsx";
 
 export function Footer() {
   return (
