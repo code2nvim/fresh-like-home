@@ -29,11 +29,10 @@ export function ThemeButton(props: JSX.HTMLAttributes<HTMLButtonElement>) {
 export function ThemeHome(props: JSX.HTMLAttributes<HTMLAnchorElement>) {
   return (
     <a {...props} href="/">
-      <svg className="stroke-2" viewBox="-1 -1 27 27">
+      <svg class="fill-none stroke-2" viewBox="-1 -1 27 27">
         <polygon
+          class={`${theme.value == "dark" ? "stroke-white" : "stroke-black"}`}
           points="12,0 0,8 0,25 8,25 8,15 16,15 16,25 24,25 24,8"
-          stroke={theme.value == "dark" ? "white" : "black"}
-          fill="none"
         />
       </svg>
     </a>
