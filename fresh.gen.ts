@@ -8,6 +8,7 @@ import * as $_layout from "./routes/_layout.tsx";
 import * as $api_login from "./routes/api/login.ts";
 import * as $documents from "./routes/documents.tsx";
 import * as $index from "./routes/index.tsx";
+import * as $notes from "./routes/notes.tsx";
 import * as $videos from "./routes/videos.tsx";
 import * as $theme from "./islands/theme.tsx";
 import type { Manifest } from "$fresh/server.ts";
@@ -20,6 +21,7 @@ const manifest = {
     "./routes/api/login.ts": $api_login,
     "./routes/documents.tsx": $documents,
     "./routes/index.tsx": $index,
+    "./routes/notes.tsx": $notes,
     "./routes/videos.tsx": $videos,
   },
   islands: {

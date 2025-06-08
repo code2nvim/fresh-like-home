@@ -26,6 +26,7 @@ export default function Home({ data }: PageProps<Data>) {
           ].join(" ")}
         >
           <Anchor href="documents">Documents</Anchor>
+          <Anchor href="notes">Notes</Anchor>
           <Anchor href="videos">Video</Anchor>
         </main>
       )
