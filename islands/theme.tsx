@@ -32,15 +32,10 @@ export function ThemeHome(props: JSX.HTMLAttributes<HTMLAnchorElement>) {
       <svg
         class={`${
           IS_BROWSER && location.pathname == "/" ? "fill-current" : "fill-none"
-        } stroke-2`}
+        } stroke-current stroke-2`}
         viewBox="-1 -1 27 27"
       >
-        <polygon
-          class={`${
-            theme.value == "dark" ? "stroke-current" : "stroke-current"
-          }`}
-          points="12,0 0,8 0,25 7,25 7,15 17,15 17,25 24,25 24,8"
-        />
+        <polygon points="12,0 0,8 0,25 8,25 8,15 16,15 16,25 24,25 24,8" />
       </svg>
     </a>
   );
