@@ -11,6 +11,7 @@ import * as $index from "./routes/index.tsx";
 import * as $notes from "./routes/notes.tsx";
 import * as $videos from "./routes/videos.tsx";
 import * as $Theme from "./islands/Theme.tsx";
+import * as $_islands_Login from "./routes/(_islands)/Login.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -26,6 +27,7 @@ const manifest = {
   },
   islands: {
     "./islands/Theme.tsx": $Theme,
+    "./routes/(_islands)/Login.tsx": $_islands_Login,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

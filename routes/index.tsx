@@ -1,11 +1,8 @@
-import type { Handlers, PageProps } from "$fresh/server.ts";
+import type { FreshContext, Handlers } from "$fresh/server.ts";
 import { getCookies } from "$std/http/cookie.ts";
 import { Anchor } from "../components/Anchor.tsx";
-import { Login } from "./(_components)/Login.tsx";
-
-interface Data {
-  allowed: boolean;
-}
+import { LoginData } from "../utils/login.ts";
+import { Login } from "./(_islands)/Login.tsx";
 
 export const handler: Handlers = {
   GET(req, ctx) {
@@ -14,9 +11,11 @@ export const handler: Handlers = {
   },
 };
 
-export default function Home({ data }: PageProps<Data>) {
-  return data.allowed
-    ? (
+export default async function Home(_req: Request, ctx: FreshContext<LoginData>) {
+  const data = await ctx.data;
+
+  return (
+    <Login allowed={data.allowed}>
       <main
         class={[
           "mx-2 flex flex-col items-center gap-4 rounded-md px-8 py-12",
@@ -28,6 +27,6 @@ export default function Home({ data }: PageProps<Data>) {
         <Anchor href="notes">Notes</Anchor>
         <Anchor href="videos">Video</Anchor>
       </main>
-    )
-    : <Login />;
+    </Login>
+  );
 }
