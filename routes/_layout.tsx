@@ -1,7 +1,7 @@
 import { PageProps } from "$fresh/server.ts";
 import { Footer } from "./(_components)/Footer.tsx";
 import { Header } from "./(_components)/Header.tsx";
-import { ThemeLayout } from "../islands/theme.tsx";
+import { ThemeLayout } from "../islands/Theme.tsx";
 
 export default function Layout({ Component }: PageProps) {
   return (

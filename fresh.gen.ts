@@ -10,7 +10,7 @@ import * as $documents from "./routes/documents.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $notes from "./routes/notes.tsx";
 import * as $videos from "./routes/videos.tsx";
-import * as $theme from "./islands/theme.tsx";
+import * as $Theme from "./islands/Theme.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -25,7 +25,7 @@ const manifest = {
     "./routes/videos.tsx": $videos,
   },
   islands: {
-    "./islands/theme.tsx": $theme,
+    "./islands/Theme.tsx": $Theme,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

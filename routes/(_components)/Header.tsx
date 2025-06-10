@@ -1,4 +1,4 @@
-import { ThemeButton, ThemeHome } from "../../islands/theme.tsx";
+import { ThemeButton, ThemeHome } from "../../islands/Theme.tsx";
 
 export function Header() {
   return (

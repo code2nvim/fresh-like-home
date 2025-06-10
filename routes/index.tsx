@@ -20,7 +20,7 @@ export default function Home({ data }: PageProps<Data>) {
       <main
         class={[
           "mx-2 flex flex-col items-center gap-4 rounded-md px-8 py-12",
-          "sm:flex-row sm:items-start",
+          "sm:flex-row sm:items-start sm:justify-center",
           "bg-green-200 dark:bg-green-800",
         ].join(" ")}
       >

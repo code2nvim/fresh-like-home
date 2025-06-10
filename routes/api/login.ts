@@ -1,13 +1,16 @@
 import type { Handlers } from "$fresh/server.ts";
 import { setCookie } from "$std/http/cookie.ts";
 
+const USERNAME = Deno.env.get("LOGIN_USERNAME");
+const PASSWORD = Deno.env.get("LOGIN_PASSWORD");
+
 export const handler: Handlers = {
   async POST(req) {
     const url = new URL(req.url);
     const form = await req.formData();
     if (
-      form.get("username") === Deno.env.get("LOGIN_USER") &&
-      form.get("password") === Deno.env.get("LOGIN_PASSWORD")
+      form.get("username") === USERNAME &&
+      form.get("password") === PASSWORD
     ) {
       const headers = new Headers();
       setCookie(headers, {
