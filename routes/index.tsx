@@ -2,7 +2,7 @@ import type { FreshContext, Handlers } from "$fresh/server.ts";
 import { getCookies } from "$std/http/cookie.ts";
 import { Anchor } from "../components/Anchor.tsx";
 import { LoginData } from "../utils/login.ts";
-import { Login } from "./(_islands)/Login.tsx";
+import { Login } from "./(_components)/Login.tsx";
 
 export const handler: Handlers = {
   GET(req, ctx) {
@@ -11,7 +11,10 @@ export const handler: Handlers = {
   },
 };
 
-export default async function Home(_req: Request, ctx: FreshContext<LoginData>) {
+export default async function Home(
+  _req: Request,
+  ctx: FreshContext<LoginData>,
+) {
   const data = await ctx.data;
 
   return (
