@@ -1,1 +1,6 @@
-export const DOCS_DIR = Deno.env.get("DOCS_DIR") || "";
+// LOGIN
+export const USERNAME = Deno.env.get("LOGIN_USERNAME") || "";
+export const PASSWORD = Deno.env.get("LOGIN_PASSWORD") || "";
+
+// DIR
+export const DIR_DOCS = Deno.env.get("DIR_DOCS") || "";

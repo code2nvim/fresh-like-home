@@ -1,8 +1,6 @@
 import type { Handlers } from "$fresh/server.ts";
 import { setCookie } from "$std/http/cookie.ts";
-
-const USERNAME = Deno.env.get("LOGIN_USERNAME");
-const PASSWORD = Deno.env.get("LOGIN_PASSWORD");
+import { PASSWORD, USERNAME } from "../../utils/env.ts";
 
 export const handler: Handlers = {
   async POST(req) {

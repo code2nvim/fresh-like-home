@@ -1,8 +1,8 @@
 import { walk } from "$std/fs/walk.ts";
-import { DOCS_DIR } from "../utils/env.ts";
+import { DIR_DOCS } from "../utils/env.ts";
 
 export default async function Documents() {
-  const files = (await Array.fromAsync(walk(DOCS_DIR))).sort((a, b) =>
+  const files = (await Array.fromAsync(walk(DIR_DOCS))).sort((a, b) =>
     a.path.localeCompare(b.path)
   );
 
