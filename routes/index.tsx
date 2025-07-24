@@ -1,24 +1,15 @@
-import type { FreshContext, Handlers } from "$fresh/server.ts";
-import { getCookies } from "$std/http/cookie.ts";
+import type { FreshContext } from "$fresh/server.ts";
 import { Anchor } from "../components/Anchor.tsx";
-import { LoginData } from "../utils/login.ts";
-import { Login } from "./(_components)/Login.tsx";
-
-export const handler: Handlers = {
-  GET(req, ctx) {
-    const cookies = getCookies(req.headers);
-    return ctx.render!({ allowed: cookies.auth === "allowed" });
-  },
-};
+import { LoginData } from "./login.tsx";
 
 export default async function Home(
   _req: Request,
   ctx: FreshContext<LoginData>,
 ) {
-  const data = await ctx.data;
+  const state = await Promise.resolve(ctx.state); // prevent warning
 
   return (
-    <Login allowed={data.allowed}>
+    <>
       <main
         class={[
           "mx-2 flex flex-col items-center gap-4 rounded-md px-8 py-12",
@@ -30,6 +21,12 @@ export default async function Home(
         <Anchor href="notes">Notes</Anchor>
         <Anchor href="videos">Video</Anchor>
       </main>
-    </Login>
+
+      <div class="pointer-events-none absolute inset-0 flex min-h-screen w-full items-center justify-center">
+        {state.allowed && (
+          <a href="/logout" class="pointer-events-auto">logout</a>
+        )}
+      </div>
+    </>
   );
 }
