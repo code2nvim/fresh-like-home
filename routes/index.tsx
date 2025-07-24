@@ -24,7 +24,9 @@ export default async function Home(
 
       <div class="pointer-events-none absolute inset-0 flex min-h-screen w-full items-center justify-center">
         {state.allowed && (
-          <a href="/logout" class="pointer-events-auto">logout</a>
+          <a href="/logout" class="pointer-events-auto">
+            logout
+          </a>
         )}
       </div>
     </>
