@@ -42,22 +42,18 @@ export function ThemeHome(props: JSX.HTMLAttributes<HTMLAnchorElement>) {
 }
 
 export function ThemeLayout(props: JSX.HTMLAttributes<HTMLDivElement>) {
-  return (
-    <>
-      {IS_BROWSER && <div {...props} class={[props.class, theme].join(" ")} />}
-    </>
-  );
+  return <div {...props} class={[props.class, theme].join(" ")} />;
 }
 
 export function FreshLogo() {
   return (
     <img
-      width="197"
-      height="37"
       src={theme.value == "dark"
         ? "https://fresh.deno.dev/fresh-badge-dark.svg"
         : "https://fresh.deno.dev/fresh-badge.svg"}
       alt="Made with Fresh"
+      width="197"
+      height="37"
     />
   );
 }
