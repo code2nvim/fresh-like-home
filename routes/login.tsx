@@ -1,5 +1,6 @@
 import { Handlers } from "$fresh/server.ts";
 import { getCookies } from "$std/http/cookie.ts";
+import { loginCount } from "../utils/loginCount.ts";
 
 export interface LoginData {
   allowed: boolean;
@@ -16,7 +17,9 @@ export const handler: Handlers = {
   },
 };
 
-export default function Login() {
+export default async function Login() {
+  const count = await loginCount();
+
   return (
     <main class="flex flex-col items-center gap-4 p-8">
       <h1 class="text-4xl">Login</h1>
@@ -39,8 +42,9 @@ export default function Login() {
           type="submit"
           class="w-1/3 rounded border border-black dark:border-white"
         >
-          Submit
+          Login
         </button>
+        <p>Login count: {count}</p>
       </form>
     </main>
   );

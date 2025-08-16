@@ -1,11 +1,15 @@
 import type { Handlers } from "$fresh/server.ts";
 import { setCookie } from "$std/http/cookie.ts";
 import { PASSWORD, USERNAME } from "../../utils/env.ts";
+import { addLoginCount } from "../../utils/loginCount.ts";
 
 export const handler: Handlers = {
   async POST(req) {
     const url = new URL(req.url);
     const form = await req.formData();
+
+    await addLoginCount();
+
     if (
       form.get("username") === USERNAME &&
       form.get("password") === PASSWORD
