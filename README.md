@@ -13,3 +13,7 @@ deno task start
 ```
 
 This will watch the project directory and restart as necessary.
+
+### Create .env
+
+Environment variables will be automatically read from .env
