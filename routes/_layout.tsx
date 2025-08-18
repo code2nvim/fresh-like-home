@@ -3,7 +3,7 @@ import { Footer } from "./(_components)/Footer.tsx";
 import { Header } from "./(_components)/Header.tsx";
 import { ThemeLayout } from "../islands/Theme.tsx";
 
-export default function Layout({ Component }: PageProps) {
+export default function Layout({ Component, url }: PageProps) {
   return (
     <ThemeLayout
       class={[
@@ -11,7 +11,7 @@ export default function Layout({ Component }: PageProps) {
         "bg-slate-200 text-black dark:bg-slate-800 dark:text-white",
       ].join(" ")}
     >
-      <Header />
+      <Header url={url} />
       <div class="grid grow">
         <Component />
       </div>
